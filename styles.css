@@ -1,0 +1,106 @@
+
+
+:root {
+    --orange:hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --white: hsla(0, 0%, 100%, 0.75);
+    --gray: hsl(0, 0%, 95%);
+}
+
+body {
+    background-color: var(--gray);
+    padding: 2em;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--gray);
+    margin: 0;
+    font-size: 2.3em;
+}
+
+a {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--white);
+    padding-bottom: 2.5em;
+    line-height: 1.5;
+    font-size: 15px;
+    margin: 0;
+}
+
+img {
+    width: 60px;
+    margin-bottom: 1em;
+}
+
+button {
+    padding: 1em 2em;
+    border-radius: 2em;
+    border-style: none;
+}
+
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 760px;
+    align-items: center;
+}
+
+.main {
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5em;
+}
+
+.card-1 {
+    background-color: var(--orange);
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+
+.card-1 button {
+    color: var(--orange);
+}
+
+.card-2 {
+    background-color: var(--dark-cyan);
+}
+
+.card-2 button {
+    color: var(--dark-cyan);
+}
+
+.card-3 {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.card-3 button {
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width:375px) {
+    .container {
+        grid-auto-flow: row;
+    }
+
+    .card-1 {
+        border-radius: 0.5em 0.5em 0 0;
+    }
+
+    .card-3 {
+        border-radius: 0 0 0.5em 0.5em;
+    }
+}
